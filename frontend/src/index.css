@@ -1,0 +1,264 @@
+/* Global overrides if needed */
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: #ffffff;
+}
+
+/* Custom styles to add display: flex to footer logo elements */
+#site-footer .social-link {
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#site-footer .social-link li {
+  margin: 0 !important;
+}
+
+#site-footer .footer-right .block-image {
+  display: flex !important;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Ensure centering on small/mobile screens */
+@media (max-width: 767px) {
+  #site-footer .social-link {
+    justify-content: center;
+  }
+  #site-footer .footer-right .block-image {
+    justify-content: center;
+  }
+}
+
+/* Brand logo items flex */
+.brand-logo-item a {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==========================================================================
+   ADMIN PORTAL CUSTOM ISOLATION & RESET
+   Ensures the admin panel looks clean and is unaffected by the main site's CSS
+   ========================================================================== */
+
+/* Layout & Containers resets */
+.admin-container {
+  display: flex !important;
+  flex-direction: row !important;
+  font-family: 'Lato', sans-serif !important;
+  box-sizing: border-box !important;
+  min-height: 100vh !important;
+  background-color: #f8fafc !important;
+}
+
+.admin-container *, .admin-container *:before, .admin-container *:after {
+  box-sizing: border-box !important;
+}
+
+.admin-container aside.admin-sidebar {
+  position: static !important;
+  width: 260px !important;
+  min-width: 260px !important;
+  height: auto !important;
+  min-height: 100vh !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  float: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%) !important;
+  flex-shrink: 0 !important;
+}
+
+.admin-container .admin-content-wrapper {
+  position: static !important;
+  height: auto !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  background: #f8fafc !important;
+  flex-grow: 1 !important;
+  min-width: 0 !important;
+  width: calc(100% - 260px) !important;
+}
+
+.admin-container header {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  box-shadow: 0 4px 20px -2px rgba(0,0,0,0.03) !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(8px) !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  padding: 16px 24px !important;
+  margin: 0 !important;
+  z-index: 5 !important;
+}
+
+.admin-container main {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 24px !important;
+  margin: 0 !important;
+  background: #f8fafc !important;
+  display: block !important;
+  float: none !important;
+  max-width: 100% !important;
+  overflow: visible !important;
+}
+
+/* Sidebar navigation resets */
+.admin-sidebar ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  display: block !important;
+}
+
+.admin-sidebar li {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  list-style: none !important;
+}
+
+.admin-sidebar a {
+  text-decoration: none !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.admin-sidebar a:hover {
+  text-decoration: none !important;
+}
+
+/* Grid layout overrides */
+.admin-container .row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin-right: -12px !important;
+  margin-left: -12px !important;
+}
+
+.admin-container .col-lg-3,
+.admin-container .col-lg-4,
+.admin-container .col-lg-5,
+.admin-container .col-lg-7,
+.admin-container .col-lg-8,
+.admin-container .col-md-6,
+.admin-container .col-md-12,
+.admin-container .col-12 {
+  padding-right: 12px !important;
+  padding-left: 12px !important;
+  position: relative !important;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .admin-container .col-md-6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+  .admin-container .col-md-12 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .admin-container .col-lg-3 {
+    flex: 0 0 25% !important;
+    max-width: 25% !important;
+    width: 25% !important;
+  }
+  .admin-container .col-lg-4 {
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+    width: 33.333333% !important;
+  }
+  .admin-container .col-lg-5 {
+    flex: 0 0 41.666667% !important;
+    max-width: 41.666667% !important;
+    width: 41.666667% !important;
+  }
+  .admin-container .col-lg-7 {
+    flex: 0 0 58.333333% !important;
+    max-width: 58.333333% !important;
+    width: 58.333333% !important;
+  }
+  .admin-container .col-lg-8 {
+    flex: 0 0 66.666667% !important;
+    max-width: 66.666667% !important;
+    width: 66.666667% !important;
+  }
+}
+
+/* Card design resets */
+.admin-container .card {
+  border: none !important;
+  border-radius: 12px !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.02) !important;
+  margin-bottom: 24px !important;
+}
+
+.admin-container .card.text-white {
+  color: #ffffff !important;
+}
+
+/* Tables style resets */
+.admin-container table {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-bottom: 0 !important;
+  border-collapse: separate !important;
+  border-spacing: 0 8px !important;
+  background: transparent !important;
+}
+
+.admin-container table tr {
+  background-color: transparent !important;
+}
+
+.admin-container table th {
+  border: none !important;
+  background-color: transparent !important;
+  color: #64748b !important;
+  font-weight: 700 !important;
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  padding: 8px 16px !important;
+}
+
+.admin-container table td {
+  vertical-align: middle !important;
+  border: none !important;
+}
+
+.admin-container .table-responsive {
+  display: block !important;
+  width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* Badge and text styling overrides */
+.admin-container .badge {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+}
